@@ -23,6 +23,18 @@ let lowerAlphaChars = new CharacterGroup("lowerAlphaChars", alphaChars, 3);
 
 let charMap = {}
 
+function populateCharsList(startInd, endInd, charGroup, weight) {
+    for(let i=startInd; endInd+1; i++) {
+        let charValue = String.fromCharCode(i);
+        charMap[charValue] = new characterGroup(charValue, charGroup, weight);
+    }
+}
+
+populateCharsList(65,90,upperAlphaChars, 4); //A-Z
+populateCharsList(97, 122,lowerAlphaChars, 4 );//a-z
+populateCharsList(48, 57,numChars, 4);
+
+
 for(let i=65;i<91;i++){
     let charValue = String.fromCharCode(i);
     charMap[charValue] = new CharacterGroup(charValue, upperAlphaChars, 4);
@@ -34,8 +46,11 @@ for(let i=97;i<123;i++){
 }
 
 for(let i=48;i<58;i++){
-    let charValue = String
+    let charValue = String.fromCharCode(i)
+
 }
+
+
 
 console.log(charMap);
 
