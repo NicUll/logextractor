@@ -2,7 +2,6 @@
  * Created by Nic on 2018-03-17.
  */
 
-
 class LogEntry {
     constructor(key, data){
         this.key = key;
